@@ -1,0 +1,7 @@
+---
+title: Privacy
+permalink: /privacy.txt
+---
+Privacy Policy for {{ site.url }}
+Last update: {{ site.time }}
+

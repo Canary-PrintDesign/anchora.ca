@@ -1,0 +1,49 @@
+title: Anchora Trusted I.T. Solutions
+creator: Canary Print & Design
+email: email@example.com
+description: >-
+  Anchora provides comprehensive technology services to businesses from Nanaimo and across Vancouver Island. Through our partnerships and your help, Anchora delivers and deploys complete in-house, hybrid, and cloud network solutions.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://anchora.ca" # the base hostname & protocol for your site, e.g. http://example.com
+incremental: true
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - hyde-page-css
+  - hyde-page-js
+  - hyde-decap
+
+hyde_page_css:
+  keep_files: true
+  dev_mode: true
+
+hyde_page_js:
+  keep_files: true
+  dev_mode: true
+
+hyde_decap:
+  keep_files: false
+  enabled: true
+  backend:
+    name: github
+    repo: gregdaynes/anchora.ca # github path to repo
+    site_domain: anchora.ca # site name
+    branch: main # Branch to update (optional; defaults to master)
+  local_backend: true
+  publish_mode: editorial_workflow
+  media_folder: "src/images/uploads" # Media files will be stored in the repo under images/uploads
+  public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+  collections:
+  - label: Navigation
+    name: navigation
+    create: true
+    folder: _data/navigation
+    extension: yml
+    format: yaml-frontmatter
+    fields:
+    - label: Title
+      name: title
+      widget: string

@@ -1,0 +1,11 @@
+{% for file in page.css_files %}
+	<style>
+		{{ file.content }}
+	</style>
+{% endfor %}
+
+{% if site.ownership %}
+<link rel="me" href="{{ site.ownership }}">
+{% endif %}
+
+<link rel="author" href="{{ '/humans.txt' | prepend: site.baseurl }}" />
