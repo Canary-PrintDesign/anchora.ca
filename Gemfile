@@ -14,17 +14,12 @@ gem "jekyll", "~> 4.3"
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed"
   gem "jekyll-sitemap"
   gem "jekyll-seo-tag"
-  gem "jekyll-compose"
-  gem "jekyll-contentblocks"
-  gem 'hyde-page-css', :path => '../../gems/hyde-page-css'
+  gem 'hyde-page-css'
   gem 'hyde-page-js'
   gem "hyde-decap"
 end
-
-gem "jekyll-sass-converter", :git => 'https://github.com/jekyll/jekyll-sass-converter'
 
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
