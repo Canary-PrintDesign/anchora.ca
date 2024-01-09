@@ -60,7 +60,7 @@ html {
 }
 
 body {
-	margin: ;
+	margin: 0;
 	background-color: var(--_c-dark);
 	color: var(--_c-light);
 }
