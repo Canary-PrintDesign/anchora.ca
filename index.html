@@ -2,6 +2,8 @@
 layout: base
 css:
   - style.css
+js:
+  - summary.js
 ---
 <section>
 	<div class="container">
@@ -111,20 +113,3 @@ css:
 		</form>
 	</div>
 </section>
-
-	<script>
-		const summaries = document.querySelectorAll('summary');
-		const details = document.querySelectorAll('details');
-
-		for (const summary of summaries) {
-			summary.addEventListener('click', (e) => {
-				const currentDetail = e.target.parentNode;
-
-				for (const detail of details) {
-					if (detail !== currentDetail) {
-						detail.removeAttribute('open');
-					}
-				}
-			})
-		}
-	</script>
