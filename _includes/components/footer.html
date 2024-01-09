@@ -1,0 +1,11 @@
+{% assign nav = site.data.navigation | where: "title", "Foot Nav" | first %}
+
+<footer>
+	<div>©2024 Anchora I.T. Solutions</div>
+
+	<nav>
+		{% for item in nav.data %}
+			<a href="{{ item.href }}">{{ item.text }}</a>
+		{% endfor %}
+	</nav>
+</footer>
