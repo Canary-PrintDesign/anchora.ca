@@ -1,0 +1,276 @@
+/**
+ * Settings
+ */
+:root {
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+
+	--_c-dark: #262626;
+	--_c-dark-50: #aaa;
+	--_c-light: #e7e7eb;
+	--_c-primary: #008ab3;
+
+	font-size: 100%;
+	line-height: 1.5;
+	font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+
+	@media (min-width: 768px) {
+		font-size: clamp(1rem, 1.125rem, 4dvw);
+	}
+}
+
+/**
+ * Tools
+ */
+
+/**
+ * Generic
+ */
+
+* {
+	margin: 0;
+}
+
+*, ::before, ::after {
+	box-sizing: border-box;
+}
+
+:focus {
+	outline-width: thin;
+	outline-style: solid;
+	outline-offset: var(--s-3);
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-moz-tab-size: 4;
+}
+
+body {
+	margin: ;
+	background-color: var(--_c-dark);
+	color: var(--_c-light);
+}
+
+/**
+ * Elements
+ */
+
+h2, p {
+	margin-bottom: var(--s0);
+}
+
+a {
+	color: var(--_c-primary);
+}
+
+h2 {
+	color: var(--_c-primary);
+	font-size: var(--s2);
+	line-height: 1.15;
+}
+
+b, strong {
+	font-weight: bolder;
+}
+
+small {
+	font-size: 0.8em;
+}
+
+button,
+input,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: var(--s0);
+}
+
+input,
+textarea {
+	padding: var(--s0);
+	border: 1px solid var(--_c-dark-50);
+}
+
+/**
+ * Layout
+ */
+header {
+	padding: var(--s1);
+}
+
+section {
+	padding: var(--s1);
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: start;
+	gap: var(--s2);
+
+	@media (min-width: 768px) {
+		max-width: 1024px;
+		margin-inline: auto;
+		flex-direction: row;
+		gap: var(--s3);
+	}
+}
+
+.container > * {
+	justify-content: center;
+	width: 100%;
+
+	@media (min-width: 768px) {
+		align-content: stretch;
+		width: 50%;
+	}
+}
+
+section:nth-child(odd) .container {
+	@media (min-width: 768px) {
+		flex-direction: row-reverse;
+	}
+}
+
+section:nth-child(even) {
+	background-color: var(--_c-light);
+	color: var(--_c-dark);
+}
+
+.container img {
+	max-width: 100%;
+	height: auto;
+}
+
+img.full-height {
+	align-self: stretch;
+	object-fit: cover;
+}
+
+/**
+ * Components
+ */
+
+blockquote {
+	align-self: center;
+	color: var(--_c-primary);
+	font-size: var(--s2);
+	line-height: 1.15;
+
+	cite {
+		display: block;
+
+		&::before {
+			content: '— ';
+		}
+	}
+}
+
+header {
+	box-shadow: 0 1px 0 var(--_c-primary);
+
+	.container {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	img {
+		transform: translateY(10px);
+	}
+}
+
+footer {
+	text-align: center;
+	padding: var(--s1);
+}
+
+.cta {
+	--_padding: var(--s0) var(--s0);
+	display: block;
+	max-width: fit-content;
+	border: none;
+	text-decoration: none;
+	color: var(--_c-light);
+	background-color: var(--_c-primary);
+	border-radius: var(--s2);
+	padding: var(--_padding);
+	text-align: center;
+	flex-shrink: 0;
+
+	@media (min-width:768px) {
+		padding: var(--s1) var(--s2);
+	}
+}
+
+details {
+	border-block-start: 1px solid var(--_c-light);
+	padding-block: var(--s0);
+
+	&:last-of-type {
+		border-block-end: 1px solid var(--_c-light);
+	}
+
+	&[open] summary {
+		margin-bottom: var(--s1);
+	}
+
+	&[open] summary::after {
+		transform: rotate(0);
+	}
+
+	summary {
+		width: 100%;
+		list-style: none;
+		position: relative;
+		cursor: pointer;
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+
+		&::-webkit-details-marker {
+			display: none;
+		}
+
+		&::after {
+			content: '⌃';
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 0;
+			transform: rotate(180deg);
+		}
+	}
+}
+
+/**
+ * Trumps
+ */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
