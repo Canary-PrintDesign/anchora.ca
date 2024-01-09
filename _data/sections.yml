@@ -1,0 +1,85 @@
+data:
+  - heading: ""
+    image: /assets/images/cloud-hosting.png
+    content: ""
+    code:
+      code: |-2
+            <blockquote>
+              Anchora does what they do best so we can do what we do best.
+              <cite><a href="https://gregdaynes.com">Greg Daynes</a></cite>
+            </blockquote>
+  - heading: Supporting organizations across Vancouver Island.
+    content: >-
+      Anchora provides comprehensive technology services to businesses from
+      Nanaimo and across Vancouver Island. Through our partnerships and your
+      help, Anchora delivers and deploys complete in-house, hybrid, and cloud
+      network solutions.
+
+
+      Exceptional customer service is the foundation of our success. We support your business with reliable, professional service that builds long-term relationships.
+
+
+      We help you understand the landscape so you better understand your options; deploying the right solutions–suited to you.
+    image: /assets/images/harbour.jpg
+  - heading: Our Services
+    image: /assets/images/cloud-computing.png
+    code:
+      code: >-
+        <details>
+          <summary>On-site &amp; Remote Support</summary>
+
+          <p>Our remote access tools provide a quick way to connect with us to resolve most issues in minutes.</p>
+          <p>Dispatch a technician to visit your site to install hardware, diagnose connectivity, investigate breaches, or provide hands-on training.</p>
+          <p>A capable technician is ready to help whatever the case may be.</p>
+        </details>
+
+
+
+
+        <details>
+          <summary>Wired Network &amp; WiFI Deployment</summary>
+
+          <p>Anchora and our partners have deployed dependable wired I.T. networks for over a decade.</p>
+          <p>We deploy WiFi networks ranging from small indoor/outdoor mesh networks to wireless bridges connecting distant locations and multi-site wireless networks.</p>
+        </details>
+
+
+
+
+        <details>
+          <summary>Network &amp; Service Monitoring</summary>
+
+          <p>Monitoring network resources is integral to sound I.T. strategy and a key contributor to operating nominally.</p>
+          <p>Anchora’s monitors provide insight into resources, performance, service delivery, and patch level.</p>
+          <p>They provide us with the information we need to optimize your technical operations.</p>
+        </details>
+
+
+
+
+        <details>
+          <summary>Server &amp; Integrated Cloud Solutions</summary>
+
+          <p>Organizations today require their I.T. resources to be available across distant geographic regions or support a remote workforce.</p>
+          <p>Some rely on software that still functions best supported by in-house hardware.</p>
+          <p>Anchora will help you find the solution suited to you and your goals. Fully cloud-based? All in-house? Maybe a hybrid of the two? Understanding the implications of any solution will guide you to the right choice.</p>
+        </details>
+
+
+
+
+        <details>
+          <summary>Data Backup, Disaster Recovery &amp; Business Continuity Planning</summary>
+
+          <p>This is a critical component of any secure IT strategy. Reliable backups mitigate many risks associated with digital business operations.</p>
+          <p>A comprehensive disaster recovery plan and continuity plan will ensure your business recovers fast and critical operations continue in the event of disaster.</p>
+        </details>
+
+
+
+
+        <details>
+          <summary>IT Planning, Consulting &amp; Project Management</summary>
+
+          <p>We help you plan and execute your information system deployment, upgrade, or migration. Make informed decisions that optimize resources and build efficiency.</p>
+        </details>

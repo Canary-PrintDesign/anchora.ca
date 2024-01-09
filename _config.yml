@@ -34,16 +34,46 @@ hyde_decap:
     branch: main # Branch to update (optional; defaults to master)
   local_backend: true
   publish_mode: editorial_workflow
-  media_folder: "src/images/uploads" # Media files will be stored in the repo under images/uploads
-  public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+  media_folder: "/assets/images" # Media files will be stored in the repo under images/uploads
+  public_folder: "/assets/images" # The src attribute for uploaded media will begin with /images/uploads
   collections:
-  - label: Navigation
-    name: navigation
-    create: true
-    folder: _data/navigation
-    extension: yml
-    format: yaml-frontmatter
-    fields:
-    - label: Title
-      name: title
-      widget: string
+    - label: Data
+      name: data
+      files:
+        - label: Sections
+          name: sections
+          file: _data/sections.yml
+          fields:
+            - label: Data
+              name: data
+              widget: list
+              allow_add: true
+              collapsed: true
+              summary: '{{fields.heading}}'
+              fields:
+              - label: Heading
+                name: heading
+                widget: string
+                required: false
+              - label: Image
+                name: image
+                widget: image
+              - label: Code
+                name: code
+                widget: code
+                required: false
+              - label: Content
+                name: content
+                widget: markdown
+                required: false
+        - label: Contact
+          name: contact
+          file: _data/contact.yml
+          fields:
+            - label: Heading
+              name: heading
+              widget: string
+              required: false
+            - label: Content
+              name: content
+              widget: markdown
