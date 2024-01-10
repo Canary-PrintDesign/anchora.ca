@@ -129,7 +129,7 @@ section {
 	gap: var(--s2);
 
 	@media (min-width: 768px) {
-		max-width: 1024px;
+		max-width: 1400px;
 		margin-inline: auto;
 		flex-direction: row;
 		gap: var(--s3);
